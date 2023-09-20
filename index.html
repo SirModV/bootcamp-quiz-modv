@@ -4,32 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>modQuiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Javascript Quiz</title>
 </head>
 <body>
     <header>
         <nav>
-            <p class="highscores" id="highscores">High Scores</p>
-            <p id="time"> Time left: 70</p>
+            <p class="view-scores" id="high-scores">View high scores</p>
+            <p id="timer">Time: 0</p>
         </nav>
     </header>
-
+    
     <main>
         <section class="hero" id="hero">
-            <h1>Javascript Fundamental Quiz</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds </p>
-            <button id="startbtn">Start Quiz</button>
+            <h1>Javascript Fundamentals Quiz</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
+            <button id="startQuizBtn">Start Quiz</button>
         </section>
-        <section class="questionpage">
-            <h1>question1</h1>
-            <button>choice1</button>
-            <button>choice2</button>
-            <button>choice3</button>
-            <button>choice4</button>
+        <section class="quiz" id="quiz">
+            <section class="quiz-info" id="quiz-info">
+                <p id="question"></p>
+                <button id="choice1"></button>
+                <button id="choice2"></button>
+                <button id="choice3"></button>
+                <button id="choice4"></button>
+            </section>
+            <section class="answer-results" id="answer-results">
+                <h3>All done!</h3>
+                <p id="game-score"></p>
+                <form class="score-form" id="score-form">
+                    <label for="player-initials">Enter initials: </label>
+                    <input class="initials-input" type="text" id="player-initials" name="player-initials" required>
+                    <input class="submit-btn" type="submit" value="Submit">
+                </form>
+            </section>
+            <section class="notification">
+                <hr>
+                <p id="notification"></p>
+            </section> 
+        </section>
+        
+        <section class="high-scores" id="high-scores">
+            <h3>High scores</h3>
+            <ol id="scores-list"></ol>
+            <button id="backbtn">Go back</button>
+            <button id="clearbtn">Clear high scores</button>
         </section>
     </main>
-    
+
+    <script src="script.js"></script> 
 </body>
-<script src="./js/script.js"></script>
 </html>
